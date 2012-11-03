@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello1">Welcome to Amp Service Program </string>
+    <string name="app_name">PowerApp</string>
+    <string name="hello2">Press 1 to show amp ussage, 2 to add a House and 3 to exit</string>
+    <string name="amp">Amp Display</string>
+    <string name="addH">Add House</string>
+    <string name="exit">Exit</string>
+    <string name="Service">Enter a total service amount in amps</string>
+    <string name="Enter">Enter</string>
+    <string name="amps">Amp Display</string>
+    <string name="main">Exit</string>
+    <string name="appliance">Add appliance</string>
+    <string name="reset">Reset</string>
+    <string name="ampview">This screen will display total amp ussage</string>
+    <string name="appview">Where we could view and navigate appliances</string>
+    <string name="reset2">Delete then re-create the database for the app (same schema)</string>
+    <string name="HouseName">Enter Name for Your House</string>
+
+</resources>

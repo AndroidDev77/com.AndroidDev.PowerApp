@@ -34,8 +34,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 	Button buttonAmp=null;
 	Button buttonApp=null;
 	Button reset=null;
-	Context aContext = getBaseContext();
-
+	
  /*   
 	public static House new_house() throws IOException {
 //		read_input new_input = new read_input();
@@ -67,7 +66,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         reset.setPressed(false);
         
         
-        
+        Context aContext = getBaseContext();
+
 
         
         B1.setOnClickListener(new View.OnClickListener() {
@@ -175,8 +175,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                  * */
                 // Inserting Contacts
             	
-            	DatabaseHandler db = new DatabaseHandler(aContext);
-                Log.d("Insert: ", "Inserting ..");
+            	DatabaseHandler db = new DatabaseHandler(getBaseContext());
+                Log.v("Insert: ", "Inserting ..");
                 db.addHouse(new House("Ravi", "9100000000"));
                 db.addHouse(new House("Srinivas", "9199999999"));
                 db.addHouse(new House("Tommy", "9522222222"));
@@ -189,7 +189,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                 for (House cn : contacts) {
                     String log = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Phone: " + cn.getPhoneNumber();
                         // Writing Contacts to log
-                Log.d("Name: ", log);
+                Log.v("Name: ", log);
             }
             	
                 

@@ -11,53 +11,53 @@ package spivey.app.practice0001;
 public class House {
 	 
     //private variables
-    int _id;
-    String _name;
-    String _phone_number;
+    int _houseid;
+    String _housename;
+    int _service;
  
     // Empty constructor
     public House(){
  
     }
     // constructor
-    public House(int id, String name, String _phone_number){
-        this._id = id;
-        this._name = name;
-        this._phone_number = _phone_number;
+    public House(int id, String name, int _service){
+        this._houseid = id;
+        this._housename = name;
+        this._service = _service;
     }
  
     // constructor
-    public House(String name, String _phone_number){
-        this._name = name;
-        this._phone_number = _phone_number;
+    public House(String name, int _service){
+        this._housename = name;
+        this._service = _service;
     }
     // getting ID
     public int getID(){
-        return this._id;
+        return this._houseid;
     }
  
     // setting id
     public void setID(int id){
-        this._id = id;
+        this._houseid = id;
     }
  
     // getting name
     public String getName(){
-        return this._name;
+        return this._housename;
     }
  
     // setting name
     public void setName(String name){
-        this._name = name;
+        this._housename = name;
     }
  
     // getting phone number
-    public String getPhoneNumber(){
-        return this._phone_number;
+    public int getService(){
+        return this._service;
     }
  
     // setting phone number
-    public void setPhoneNumber(String phone_number){
-        this._phone_number = phone_number;
+    public void setService(int service){
+        this._service = service;
     }
 }

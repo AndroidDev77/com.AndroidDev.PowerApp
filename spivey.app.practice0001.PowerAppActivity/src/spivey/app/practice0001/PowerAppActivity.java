@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -163,6 +164,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
       //      	buttonMain.setOnClickListener(exitOneHandler);
             	buttonAmp.setPressed(false);
             	
+            	EditText housenameEdit = (EditText)findViewById(R.id.HouseName_text);
+            	EditText serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
             	//Database
             	//TODO
             	/*
@@ -177,17 +180,17 @@ public class PowerAppActivity extends Activity implements OnClickListener {
             	
             	DatabaseHandler db = new DatabaseHandler(getBaseContext());
                 Log.v("Insert: ", "Inserting ..");
-                db.addHouse(new House("Ravi", "9100000000"));
-                db.addHouse(new House("Srinivas", "9199999999"));
-                db.addHouse(new House("Tommy", "9522222222"));
-                db.addHouse(new House("Karthik", "9533333333"));
+                db.addHouse(new House(1, housenameEdit.getText().toString(),Integer.parseInt(serviceamountEdit.getText().toString())));
+                //db.addHouse(new House(2,"House2", 2200));
+                //db.addHouse(new House(3,"House3", 3000));
+                //db.addHouse(new House(4,"House4", 1500));
          
                 // Reading all contacts
                 Log.d("Reading: ", "Reading all contacts..");
                 List<House> contacts = db.getAllHouses();       
          
                 for (House cn : contacts) {
-                    String log = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Phone: " + cn.getPhoneNumber();
+                    String log = "HouseId: "+cn.getID()+" ,Name: " + cn.getName() + " ,Service Amps: " + cn.getService();
                         // Writing Contacts to log
                 Log.v("Name: ", log);
             }

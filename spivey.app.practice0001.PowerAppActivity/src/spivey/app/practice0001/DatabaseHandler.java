@@ -85,7 +85,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return house;
     }
  
-    // Getting All Houses
+    // Getting All House
     public List<House> getAllHouses() {
         List<House> houseList = new ArrayList<House>();
         // Select All Query

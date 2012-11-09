@@ -15,7 +15,7 @@ public class House {
     String _housename;
     int _service;
  
-    // Empty constructor
+    // Empty constructot
     public House(){
  
     }

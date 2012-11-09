@@ -176,7 +176,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                 /**
                  * CRUD Operations
                  * */
-                // Inserting Contacts
+                // Inserting Contacts get from edittext
             	
             	DatabaseHandler db = new DatabaseHandler(getBaseContext());
                 Log.v("Insert: ", "Inserting ..");

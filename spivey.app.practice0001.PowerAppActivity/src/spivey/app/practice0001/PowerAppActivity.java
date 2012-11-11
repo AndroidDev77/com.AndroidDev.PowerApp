@@ -35,6 +35,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 	Button buttonAmp=null;
 	Button buttonApp=null;
 	Button reset=null;
+	EditText housenameEdit;
+	EditText serviceamountEdit;
 	
  /*   
 	public static House new_house() throws IOException {
@@ -66,6 +68,9 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         reset=(Button)findViewById(R.id.Reset);
         reset.setPressed(false);
         
+
+
+        
         
         Context aContext = getBaseContext();
 
@@ -78,7 +83,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
             //    startActivity(myintent2);
             	
             	setContentView(R.layout.button1);
-            	
+                housenameEdit =(EditText)findViewById(R.id.HouseName_text);
+                serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
             	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
                 ServiceEnter.setOnClickListener(enterHandler);
                 ServiceEnter.setPressed(false);
@@ -164,8 +170,6 @@ public class PowerAppActivity extends Activity implements OnClickListener {
       //      	buttonMain.setOnClickListener(exitOneHandler);
             	buttonAmp.setPressed(false);
             	
-            	EditText housenameEdit = (EditText)findViewById(R.id.HouseName_text);
-            	EditText serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
             	//Database
             	//TODO
             	/*
@@ -193,7 +197,10 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                     String log = "HouseId: "+cn.getID()+" ,Name: " + cn.getName() + " ,Service Amps: " + cn.getService();
                         // Writing Contacts to log
                 Log.v("Name: ", log);
-            }
+                }
+ 
+            	
+
             	
                 
                 buttonAmp.setOnClickListener(new View.OnClickListener() {
@@ -246,10 +253,14 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                            //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
                             //    startActivity(myintent2);
                             	setContentView(R.layout.button1);
-                            	
+                                housenameEdit =(EditText)findViewById(R.id.HouseName_text);
+                                serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
                             	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
                                 ServiceEnter.setOnClickListener(enterHandler);
                                 ServiceEnter.setPressed(false);
+                                
+                            	
+
 
                             }
                         });
@@ -309,7 +320,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                    //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
                     //    startActivity(myintent2);
                     	setContentView(R.layout.button1);
-                    	
+                        housenameEdit =(EditText)findViewById(R.id.HouseName_text);
+                        serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
                     	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
                         ServiceEnter.setOnClickListener(enterHandler);
                         ServiceEnter.setPressed(false);
@@ -357,6 +369,8 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     	public void onClick(View v){
     		if(B1.isPressed()){
             	setContentView(R.layout.button1);
+                housenameEdit =(EditText)findViewById(R.id.HouseName_text);
+                serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
                 ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
                 ServiceEnter.setOnClickListener(enterHandler);
                 ServiceEnter.setPressed(false);

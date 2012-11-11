@@ -18,6 +18,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AddHouseActivity"
+            android:label="@string/title_activity_add_house" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="spivey.app.practice0001.PowerAppActivity" />
+        </activity>
+        <activity
+            android:name=".HouseConfigActivity"
+            android:label="@string/title_activity_house_config" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="spivey.app.practice0001.PowerAppActivity" />
+        </activity>
     </application>
 
 </manifest>

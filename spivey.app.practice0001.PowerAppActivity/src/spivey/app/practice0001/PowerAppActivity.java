@@ -27,7 +27,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 //	public static House houses[] = new House[10];  // Max 10 houses during first iteration of the program
 
 	
-	Button B1=null;
+	Button addHouse_Button=null;
 	Button B3=null;
 	Button ServiceEnter=null;
 	Button Main=null;
@@ -59,10 +59,10 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        B1=(Button)findViewById(R.id.button1);
+        addHouse_Button=(Button)findViewById(R.id.addHouse_Button);
         B3=(Button)findViewById(R.id.button3);
     //    B1.setOnClickListener(this);
-        B1.setPressed(false);
+        addHouse_Button.setPressed(false);
  //       B3.setOnClickListener(this);
         B3.setPressed(false);
         reset=(Button)findViewById(R.id.Reset);
@@ -76,18 +76,18 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 
 
         
-        B1.setOnClickListener(new View.OnClickListener() {
+        addHouse_Button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-           //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-            //    startActivity(myintent2);
+                Intent myintent2 = new Intent(PowerAppActivity.this,AddHouseActivity.class);
+                startActivity(myintent2);
             	
-            	setContentView(R.layout.button1);
+            /*	setContentView(R.layout.button1);
                 housenameEdit =(EditText)findViewById(R.id.HouseName_text);
                 serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
             	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
                 ServiceEnter.setOnClickListener(enterHandler);
-                ServiceEnter.setPressed(false);
+                ServiceEnter.setPressed(false);*/
                 
             }
         });
@@ -125,79 +125,15 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         Main.setPressed(false);        */
     }
     
-/*    public void onClick(View v){
-    	
-    	
-    	switch (v.getId()) {
-        case R.id.button1: 
-            ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
-            ServiceEnter.setOnClickListener(enterHandler);
-            ServiceEnter.setPressed(false);
-       	try {
-			houses[house_count] = new_house();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-         break;
-        case R.id.button3:
-        	setContentView(R.layout.ampdisplay);
-        	
-        	buttonMain=(Button)findViewById(R.id.buttonMain);
-        	buttonMain.setOnClickListener(exitOneHandler);
-        	buttonMain.setPressed(false);
-         break;
-     }
 
-    } */
 
     
     private OnClickListener enterHandler = new OnClickListener() {
     	public void onClick(View v){
     		if(ServiceEnter.isPressed()){
-            	//save text entry to serAmp in new house function
-            	setContentView(R.layout.houseconfig);
+ 
             	
-            	buttonMain=(Button)findViewById(R.id.buttonMain);
-      //      	buttonMain.setOnClickListener(exitOneHandler);
-            	buttonMain.setPressed(false);
             	
-            	buttonApp=(Button)findViewById(R.id.buttonApp);
-      //      	buttonMain.setOnClickListener(exitOneHandler);
-            	buttonApp.setPressed(false);
-            	
-            	buttonAmp=(Button)findViewById(R.id.buttonAmp);
-      //      	buttonMain.setOnClickListener(exitOneHandler);
-            	buttonAmp.setPressed(false);
-            	
-            	//Database
-            	//TODO
-            	/*
-            	private DatabaseHandler exitOneHandler = new OnClickListener() {
-                	public void onClick(View v){
-            	DatabaseHandler db = new DatabaseHandler(this);
-            	 */
-                /**
-                 * CRUD Operations
-                 * */
-                // Inserting Contacts get from edittext
-            	
-            	DatabaseHandler db = new DatabaseHandler(getBaseContext());
-                Log.v("Insert: ", "Inserting ..");
-                db.addHouse(new House(1, housenameEdit.getText().toString(),Integer.parseInt(serviceamountEdit.getText().toString())));
-                //db.addHouse(new House(2,"House2", 2200));
-                //db.addHouse(new House(3,"House3", 3000));
-                //db.addHouse(new House(4,"House4", 1500));
-         
-                // Reading all contacts
-                Log.d("Reading: ", "Reading all contacts..");
-                List<House> contacts = db.getAllHouses();       
-         
-                for (House cn : contacts) {
-                    String log = "HouseId: "+cn.getID()+" ,Name: " + cn.getName() + " ,Service Amps: " + cn.getService();
-                        // Writing Contacts to log
-                Log.v("Name: ", log);
-                }
  
             	
 
@@ -237,33 +173,16 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                     //    startActivity(myintent2);
                     	setContentView(R.layout.main);
                     	
-                        B1=(Button)findViewById(R.id.button1);
+                      //  addHouse_Button=(Button)findViewById(R.id.button1);
                         B3=(Button)findViewById(R.id.button3);
                     //    B1.setOnClickListener(this);
-                        B1.setPressed(false);
+                        addHouse_Button.setPressed(false);
                  //       B3.setOnClickListener(this);
                         B3.setPressed(false);
                         reset=(Button)findViewById(R.id.Reset);
                         reset.setPressed(false);
                         
-                        
-                        B1.setOnClickListener(new View.OnClickListener() {
 
-                            public void onClick(View v) {
-                           //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-                            //    startActivity(myintent2);
-                            	setContentView(R.layout.button1);
-                                housenameEdit =(EditText)findViewById(R.id.HouseName_text);
-                                serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
-                            	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
-                                ServiceEnter.setOnClickListener(enterHandler);
-                                ServiceEnter.setPressed(false);
-                                
-                            	
-
-
-                            }
-                        });
                         
                         B3.setOnClickListener(new View.OnClickListener() {
 
@@ -306,15 +225,15 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     		if(buttonMain.isPressed()){
             	//save text entry to serAmp in new house function
             	setContentView(R.layout.main);
-                B1=(Button)findViewById(R.id.button1);
+                //addHouse_Button=(Button)findViewById(R.id.button1);
                 B3=(Button)findViewById(R.id.button3);
-                B1.setPressed(false);
+                addHouse_Button.setPressed(false);
                 B3.setPressed(false);
             	
                 reset=(Button)findViewById(R.id.Reset);
                 reset.setPressed(false);
                 
-                B1.setOnClickListener(new View.OnClickListener() {
+/*                addHouse_Button.setOnClickListener(new View.OnClickListener() {
 
                     public void onClick(View v) {
                    //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
@@ -327,7 +246,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                         ServiceEnter.setPressed(false);
 
                     }
-                });
+                });*/
                 
                 B3.setOnClickListener(new View.OnClickListener() {
 
@@ -365,18 +284,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     
     
     
-    private OnClickListener myClickHandler = new OnClickListener() {
-    	public void onClick(View v){
-    		if(B1.isPressed()){
-            	setContentView(R.layout.button1);
-                housenameEdit =(EditText)findViewById(R.id.HouseName_text);
-                serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
-                ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
-                ServiceEnter.setOnClickListener(enterHandler);
-                ServiceEnter.setPressed(false);
-            }
-    	}
-    };
+
     
     private OnClickListener ampDisHandler = new OnClickListener() {
     	public void onClick(View v){

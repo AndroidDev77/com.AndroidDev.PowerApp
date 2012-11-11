@@ -32,6 +32,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="spivey.app.practice0001.PowerAppActivity" />
         </activity>
+        <activity
+            android:name=".AmpDisplayActivity"
+            android:label="@string/title_activity_amp_display" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="spivey.app.practice0001.PowerAppActivity" />
+        </activity>
     </application>
 
 </manifest>

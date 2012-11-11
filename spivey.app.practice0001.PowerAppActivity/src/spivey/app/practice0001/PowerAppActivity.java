@@ -28,7 +28,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 
 	
 	Button addHouse_Button=null;
-	Button B3=null;
+	Button amp_Button=null;
 	Button ServiceEnter=null;
 	Button Main=null;
 	Button buttonMain=null;
@@ -59,12 +59,13 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        addHouse_Button=(Button)findViewById(R.id.addHouse_Button);
-        B3=(Button)findViewById(R.id.button3);
+        addHouse_Button=(Button)findViewById(R.id.addHouse_Button_id);
+        amp_Button=(Button)findViewById(R.id.amp_button_id);
+        amp_Button.setPressed(false);
     //    B1.setOnClickListener(this);
         addHouse_Button.setPressed(false);
  //       B3.setOnClickListener(this);
-        B3.setPressed(false);
+        
         reset=(Button)findViewById(R.id.Reset);
         reset.setPressed(false);
         
@@ -92,16 +93,14 @@ public class PowerAppActivity extends Activity implements OnClickListener {
             }
         });
         
-        B3.setOnClickListener(new View.OnClickListener() {
+        amp_Button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-           //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-            //    startActivity(myintent2);
-            	setContentView(R.layout.ampdisplay);
+              Intent myintent2 = new Intent(PowerAppActivity.this,AmpDisplayActivity.class);
+               startActivity(myintent2);
+            	//setContentView(R.layout.ampdisplay);
             	
-            	buttonMain=(Button)findViewById(R.id.buttonMain);
-            	buttonMain.setOnClickListener(exitOneHandler);
-            	buttonMain.setPressed(false);
+      
 
             }
         });
@@ -139,18 +138,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 
             	
                 
-                buttonAmp.setOnClickListener(new View.OnClickListener() {
-
-                    public void onClick(View v) {
-                   //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-                    //    startActivity(myintent2);
-                    	setContentView(R.layout.ampdisplay);
-                    	
-                    	buttonMain=(Button)findViewById(R.id.buttonMain);
-                    	buttonMain.setOnClickListener(exitOneHandler);
-                    	buttonMain.setPressed(false);
-                    }
-                });
+             
                 
                 buttonApp.setOnClickListener(new View.OnClickListener() {
 
@@ -174,29 +162,17 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                     	setContentView(R.layout.main);
                     	
                       //  addHouse_Button=(Button)findViewById(R.id.button1);
-                        B3=(Button)findViewById(R.id.button3);
+                      //  B3=(Button)findViewById(R.id.button3);
                     //    B1.setOnClickListener(this);
                         addHouse_Button.setPressed(false);
                  //       B3.setOnClickListener(this);
-                        B3.setPressed(false);
+                     //   B3.setPressed(false);
                         reset=(Button)findViewById(R.id.Reset);
                         reset.setPressed(false);
                         
 
                         
-                        B3.setOnClickListener(new View.OnClickListener() {
-
-                            public void onClick(View v) {
-                           //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-                            //    startActivity(myintent2);
-                            	setContentView(R.layout.ampdisplay);
-                            	
-                            	buttonMain=(Button)findViewById(R.id.buttonMain);
-                            	buttonMain.setOnClickListener(exitOneHandler);
-                            	buttonMain.setPressed(false);
-
-                            }
-                        });
+         
                         reset.setOnClickListener(new View.OnClickListener() {
 
                             public void onClick(View v) {
@@ -226,9 +202,9 @@ public class PowerAppActivity extends Activity implements OnClickListener {
             	//save text entry to serAmp in new house function
             	setContentView(R.layout.main);
                 //addHouse_Button=(Button)findViewById(R.id.button1);
-                B3=(Button)findViewById(R.id.button3);
+                //B3=(Button)findViewById(R.id.button3);
                 addHouse_Button.setPressed(false);
-                B3.setPressed(false);
+               // B3.setPressed(false);
             	
                 reset=(Button)findViewById(R.id.Reset);
                 reset.setPressed(false);
@@ -248,19 +224,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
                     }
                 });*/
                 
-                B3.setOnClickListener(new View.OnClickListener() {
-
-                    public void onClick(View v) {
-                   //     Intent myintent2 = new Intent(PowerAppActivity.this,PowerAppActivity.class);
-                    //    startActivity(myintent2);
-                    	setContentView(R.layout.ampdisplay);
-                    	
-                    	buttonMain=(Button)findViewById(R.id.buttonMain);
-                    	buttonMain.setOnClickListener(exitOneHandler);
-                    	buttonMain.setPressed(false);
-
-                    }
-                });
+   
                 reset.setOnClickListener(new View.OnClickListener() {
 
                     public void onClick(View v) {
@@ -288,17 +252,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
     
     private OnClickListener ampDisHandler = new OnClickListener() {
     	public void onClick(View v){
-    		if(B3.isPressed()){
-            	setContentView(R.layout.ampdisplay);
-            	
-            	buttonMain=(Button)findViewById(R.id.buttonMain);
-            	buttonMain.setOnClickListener(exitOneHandler);
-            	buttonMain.setPressed(false);
-            	/*
-                ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
-                ServiceEnter.setOnClickListener(enterHandler);
-                ServiceEnter.setPressed(false); */
-            }
+    
     	}
     };
 

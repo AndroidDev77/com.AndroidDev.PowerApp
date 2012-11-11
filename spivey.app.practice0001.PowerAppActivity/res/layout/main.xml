@@ -15,7 +15,7 @@
   
   
  		 <Button
-       	 	android:id="@+id/addHouse_Button"
+       	 	android:id="@+id/addHouse_Button_id"
        	 	android:layout_width="wrap_content"
        		 android:layout_height="wrap_content"
        		 android:onClick="myClickHandler"
@@ -46,7 +46,7 @@
         </TableRow>
         
         <Button
-        android:id="@+id/button3"
+        android:id="@+id/amp_button_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="ampDisHandler"

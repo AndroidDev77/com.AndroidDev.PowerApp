@@ -5,18 +5,75 @@
     android:orientation="vertical" >
     
     
-        <TextView
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/appview" />
         
-        
-        <Button
-        android:id="@+id/buttonMain"
+    <EditText
+        android:id="@+id/ApplianceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" > 
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NumberApp" />    
+
+   <EditText
+       android:id="@+id/ApplianceCount"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+    
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AppModel" />    
+
+   <EditText
+       android:id="@+id/ApplianceModel"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+    
+   
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AppUssage" />    
+
+   <EditText
+       android:id="@+id/ApplianceRating"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/ServiceEnter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="exitOneHandler"
-        android:text="@string/main" />
+        android:onClick="enterHandler"
+        android:text="@string/Enter" />
+    
+
     
 
 </LinearLayout>

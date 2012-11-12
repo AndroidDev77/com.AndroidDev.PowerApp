@@ -31,22 +31,45 @@ public class HouseConfigActivity extends Activity {
     	buttonAmp.setPressed(false);
     	
         //getActionBar().setDisplayHomeAsUpEnabled(true);
+    	
+        buttonMain.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+              Intent myintent2 = new Intent(HouseConfigActivity.this,PowerAppActivity.class);
+               startActivity(myintent2);
+            	//setContentView(R.layout.ampdisplay);
+            	
+      
+
+            }
+        });
+        
+        buttonAmp.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+              Intent myintent2 = new Intent(HouseConfigActivity.this,AmpDisplayActivity.class);
+               startActivity(myintent2);
+            	//setContentView(R.layout.ampdisplay);
+            	
+      
+
+            }
+        });
+        
+        buttonApp.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+              Intent myintent2 = new Intent(HouseConfigActivity.this,AppDisplayActivity.class);
+               startActivity(myintent2);
+            	//setContentView(R.layout.ampdisplay);
+            	
+      
+
+            }
+        });
     }
 
-    private OnClickListener enterHandler = new OnClickListener() {
-    	public void onClick(View v){
-            Intent myintent2 = new Intent(HouseConfigActivity.this,AmpDisplayActivity.class);
-            startActivity(myintent2);
-        	
-        /*	setContentView(R.layout.button1);
-            housenameEdit =(EditText)findViewById(R.id.HouseName_text);
-            serviceamountEdit = (EditText)findViewById(R.id.ServiceAmount);
-        	ServiceEnter=(Button)findViewById(R.id.ServiceEnter);
-            ServiceEnter.setOnClickListener(enterHandler);
-            ServiceEnter.setPressed(false);*/
-            
-        }
-    };
+
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

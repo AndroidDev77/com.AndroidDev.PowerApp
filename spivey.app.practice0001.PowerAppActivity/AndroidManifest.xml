@@ -39,6 +39,13 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="spivey.app.practice0001.PowerAppActivity" />
         </activity>
+        <activity
+            android:name=".AppDisplayActivity"
+            android:label="@string/title_activity_app_display" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="spivey.app.practice0001.HouseConfigActivity" />
+        </activity>
     </application>
 
 </manifest>

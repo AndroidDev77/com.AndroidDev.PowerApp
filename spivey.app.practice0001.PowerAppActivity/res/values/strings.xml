@@ -14,7 +14,7 @@
     <string name="appliance">Add appliance</string>
     <string name="reset">Reset</string>
     <string name="ampview">This screen will display total amp ussage</string>
-    <string name="appview">Where we could view and navigate appliances</string>
+    <string name="appview">Enter the name of the appliance</string>
     <string name="reset2">Delete then re-create the database for the app (same schema)</string>
     <string name="HouseName">Enter Name for Your House</string>
     <string name="hello_world">Hello world!</string>
@@ -22,5 +22,9 @@
     <string name="title_activity_add_house">AddHouseActivity</string>
     <string name="title_activity_house_config">HouseConfigActivity</string>
     <string name="title_activity_amp_display">AmpDisplayActivity</string>
+    <string name="NumberApp">Enter the Number of this applience within the house</string>
+    <string name="AppModel">Enter the Model Number for the Appliance</string>
+    <string name="AppUssage">Rate your appliance usage on a scale of 1-5 with 5 being the most</string>
+    <string name="title_activity_app_display">AppDisplayActivity</string>
 
 </resources>

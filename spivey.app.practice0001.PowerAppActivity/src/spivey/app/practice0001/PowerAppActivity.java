@@ -15,8 +15,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -68,7 +70,28 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         
         reset=(Button)findViewById(R.id.Reset);
         reset.setPressed(false);
-        
+                //Spinner for House Selection
+        Spinner house_spin = (Spinner) this.findViewById(R.id.house_spin_id);
+        DatabaseHandler db = new DatabaseHandler(getBaseContext());
+        List<House> housenames = db.getAllHouses(); 
+        String[] housenames_array = null ;
+       
+        if (housenames.size() != 0 )
+        {
+        	housenames_array = new String[housenames.size()] ;
+          for(int i = 0; i < housenames.size() ;i++)
+	        {
+	        	housenames_array[i] = housenames.get(i).getName();
+	        }
+        }
+        else 
+        {
+        	housenames_array = new String[1] ;
+        	housenames_array[0] = "No Houses Added";
+        }
+        ArrayAdapter<String> house_name_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, housenames_array);
+        house_name_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        house_spin.setAdapter(house_name_adapter);
 
 
         

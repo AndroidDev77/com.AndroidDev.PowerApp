@@ -74,13 +74,21 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         Spinner house_spin = (Spinner) this.findViewById(R.id.house_spin_id);
         DatabaseHandler db = new DatabaseHandler(getBaseContext());
         List<House> housenames = db.getAllHouses(); 
-        String[] housenames_array = new String[housenames.size()] ;
+        String[] housenames_array = null ;
        
-        for(int i = 0; i < housenames.size() ;i++)
+        if (housenames.size() != 0 )
         {
-        	housenames_array[i] = housenames.get(i).getName();
+        	housenames_array = new String[housenames.size()] ;
+          for(int i = 0; i < housenames.size() ;i++)
+	        {
+	        	housenames_array[i] = housenames.get(i).getName();
+	        }
         }
-        
+        else 
+        {
+        	housenames_array = new String[1] ;
+        	housenames_array[0] = "No Houses Added";
+        }
         ArrayAdapter<String> house_name_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, housenames_array);
         house_name_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         house_spin.setAdapter(house_name_adapter);

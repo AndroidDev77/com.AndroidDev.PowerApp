@@ -11,53 +11,90 @@ package spivey.app.practice0001;
 public class Appliance {
 	 
     //private variables
+    int _applianceid;
+    String _appliancename;
+    int _count;
     int _houseid;
-    String _housename;
-    int _service;
- 
+    String _model;
+    int _rating;
     // Empty constructor
     public Appliance(){
  
     }
     // constructor
-    public Appliance(int id, String name, int _service){
-        this._houseid = id;
-        this._housename = name;
-        this._service = _service;
+    public Appliance(int id, String name, int _count,int hid, String model, int _rating){
+        this._applianceid = id;
+        this._appliancename = name;
+        this._count = _count;
+        this._houseid = hid;
+        this._model = model;
+        this._rating = _rating;
     }
  
+
     // constructor
-    public Appliance(String name, int _service){
-        this._housename = name;
-        this._service = _service;
+    // TODO are more secondary constructors needed ?
+    public Appliance(String name, int _count){
+        this._appliancename = name;
+        this._count = _count;
     }
     // getting ID
     public int getID(){
-        return this._houseid;
+        return this._applianceid;
     }
  
     // setting id
     public void setID(int id){
-        this._houseid = id;
+        this._applianceid = id;
     }
  
     // getting name
     public String getName(){
-        return this._housename;
+        return this._appliancename;
     }
  
     // setting name
     public void setName(String name){
-        this._housename = name;
+        this._appliancename = name;
     }
  
-    // getting phone number
-    public int getService(){
-        return this._service;
+    // getting appliance count
+    public int getCount(){
+        return this._count;
     }
  
-    // setting phone number
-    public void setService(int service){
-        this._service = service;
+    // setting appliance count
+    public void setCount(int count){
+        this._count = count;
+    }
+    
+    // getting appliance count
+    public int getHID(){
+        return this._houseid;
+    }
+ 
+    // setting appliance count
+    public void setHID(int hid){
+        this._houseid = hid;
+    }
+    
+    // getting appliance model
+    public String getModel(){
+        return this._model;
+    }
+ 
+    // setting appliance model
+    public void setModel(String model){
+        this._model = model;
+    }
+    
+    // getting appliance rating
+    public int getRating(){
+        return this._rating;
+    }
+ 
+    // setting appliance rating
+    public void setRating(int rating){
+        this._rating = rating;
     }
 }

@@ -59,7 +59,7 @@ public class HouseConfigActivity extends Activity {
         buttonApp.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-              Intent myintent2 = new Intent(HouseConfigActivity.this,AppDisplayActivity.class);
+              Intent myintent2 = new Intent(HouseConfigActivity.this,AppAddActivity.class);
                startActivity(myintent2);
             	//setContentView(R.layout.ampdisplay);
             	

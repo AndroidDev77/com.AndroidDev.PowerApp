@@ -38,7 +38,7 @@ public final class R {
     public static final class layout {
         public static final int activity_add_house=0x7f030000;
         public static final int activity_amp_display=0x7f030001;
-        public static final int activity_app_display=0x7f030002;
+        public static final int activity_appliance_add=0x7f030002;
         public static final int activity_house_config=0x7f030003;
         public static final int appdisplay=0x7f030004;
         public static final int main=0x7f030005;

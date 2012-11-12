@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/appview" />
+        
+    <EditText
+        android:id="@+id/ApplianceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text" > 
+
+        <requestFocus />
+    </EditText>
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/NumberApp" />    
+
+   <EditText
+       android:id="@+id/ApplianceCount"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10" 
+       android:inputType="number">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+    
+   <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AppModel" />    
+
+   <EditText
+       android:id="@+id/ApplianceModel"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10" 
+       android:inputType="text">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+    
+   
+      <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/AppUssage" />    
+
+   <EditText
+       android:id="@+id/ApplianceRating"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:ems="10" 
+       android:inputType="number">
+  <!-- android:inputType="text|number"  -->     
+       
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/ApplianceAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="enterHandler"
+        android:text="@string/Enter" />
+    
+
+    
+
+</LinearLayout>

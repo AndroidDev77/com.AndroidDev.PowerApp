@@ -3,20 +3,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    
-        <TextView
+
+    <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/ampview" />
-        
-        
-        <Button
-        android:id="@+id/buttonMain"
-        android:layout_width="wrap_content"
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="exitOneHandler"
-        android:text="@string/main" />
-    
+        android:layout_weight="0.85" >
+
+        <TextView
+            android:id="@+id/Amps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:text="Amps:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/ampUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/Amps"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/Amps"
+            android:hint="100"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/Capacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Amps"
+            android:layout_marginTop="30dp"
+            android:text="Capacity:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/houseCapacity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Capacity"
+            android:layout_alignBottom="@+id/houseAmpCapacity"
+            android:layout_alignLeft="@+id/ampUsage"
+            android:hint="1000"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/PercentUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/Capacity"
+            android:layout_marginTop="30dp"
+            android:text="Percent:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/percentUsage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/PercentUsage"
+            android:layout_alignBottom="@+id/PercentUsage"
+            android:layout_alignLeft="@+id/houseCapacity"
+            android:hint="10%"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/houseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:hint="House 1"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
 
 </LinearLayout>

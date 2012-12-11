@@ -15,26 +15,34 @@ public final class R {
         public static final int ic_launcher=0x7f020001;
     }
     public static final class id {
-        public static final int ApplianceAdd=0x7f060008;
-        public static final int ApplianceCount=0x7f060005;
-        public static final int ApplianceModel=0x7f060006;
-        public static final int ApplianceName=0x7f060004;
-        public static final int ApplianceRating=0x7f060007;
+        public static final int Amps=0x7f060003;
+        public static final int ApplianceAdd=0x7f06000f;
+        public static final int ApplianceCount=0x7f06000c;
+        public static final int ApplianceModel=0x7f06000d;
+        public static final int ApplianceName=0x7f06000b;
+        public static final int ApplianceRating=0x7f06000e;
+        public static final int Capacity=0x7f060005;
         public static final int HouseName_text=0x7f060001;
-        public static final int Reset=0x7f06000d;
+        public static final int PercentUsage=0x7f060008;
+        public static final int Reset=0x7f060015;
         public static final int ServiceAmount=0x7f060000;
         public static final int ServiceEnter=0x7f060002;
-        public static final int addHouse_Button_id=0x7f06000c;
-        public static final int amp_button_id=0x7f06000f;
-        public static final int buttonAmp=0x7f060009;
-        public static final int buttonApp=0x7f06000a;
-        public static final int buttonMain=0x7f060003;
-        public static final int house_spin_id=0x7f06000b;
-        public static final int menu_settings=0x7f060013;
-        public static final int tableRow1=0x7f06000e;
-        public static final int tableRow2=0x7f060010;
-        public static final int tableRow3=0x7f060011;
-        public static final int tableRow4=0x7f060012;
+        public static final int addHouse_Button_id=0x7f060014;
+        public static final int ampUsage=0x7f060004;
+        public static final int amp_button_id=0x7f060017;
+        public static final int buttonAmp=0x7f060010;
+        public static final int buttonApp=0x7f060011;
+        public static final int buttonMain=0x7f060012;
+        public static final int houseAmpCapacity=0x7f060007;
+        public static final int houseCapacity=0x7f060006;
+        public static final int houseName=0x7f06000a;
+        public static final int house_spin_id=0x7f060013;
+        public static final int menu_settings=0x7f06001b;
+        public static final int percentUsage=0x7f060009;
+        public static final int tableRow1=0x7f060016;
+        public static final int tableRow2=0x7f060018;
+        public static final int tableRow3=0x7f060019;
+        public static final int tableRow4=0x7f06001a;
     }
     public static final class layout {
         public static final int activity_add_house=0x7f030000;

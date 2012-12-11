@@ -39,7 +39,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
 	Button reset=null;
 	EditText housenameEdit;
 	EditText serviceamountEdit;
-	
+	Spinner house_spin;
  /*   
 	public static House new_house() throws IOException {
 //		read_input new_input = new read_input();
@@ -71,7 +71,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         reset=(Button)findViewById(R.id.Reset);
         reset.setPressed(false);
                 //Spinner for House Selection
-        Spinner house_spin = (Spinner) this.findViewById(R.id.house_spin_id);
+        house_spin = (Spinner) this.findViewById(R.id.house_spin_id);
         DatabaseHandler db = new DatabaseHandler(getBaseContext());
         List<House> housenames = db.getAllHouses(); 
         String[] housenames_array = null ;
@@ -92,6 +92,7 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         ArrayAdapter<String> house_name_adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, housenames_array);
         house_name_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         house_spin.setAdapter(house_name_adapter);
+        
 
 
         
@@ -119,9 +120,13 @@ public class PowerAppActivity extends Activity implements OnClickListener {
         amp_Button.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+            String selectedHouse = house_spin.getSelectedItem().toString();
+            
+            
               Intent myintent2 = new Intent(PowerAppActivity.this,AmpDisplayActivity.class);
+              myintent2.putExtra("selectedHouse", selectedHouse); 
                startActivity(myintent2);
-            	//setContentView(R.layout.ampdisplay);
+               
             	
       
 
